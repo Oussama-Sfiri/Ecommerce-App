@@ -1,0 +1,422 @@
+/* ------------------- General Style ------------------- */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Oswald', sans-serif;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+header{
+    background-color: darkgreen;
+    padding: 10px 0;
+}
+
+.header-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content .brand{
+    font-size: 32px;
+    text-decoration: none;
+    color: #fff;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+}
+
+nav ul#user_info{
+    display: none;
+    align-items: center;
+}
+
+nav ul#user_info li{
+    position: relative;
+    margin: 0 5px;
+}
+
+nav ul#user_info li i{
+    color: #FFF;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+nav ul#user_info .carts-products{
+    position: absolute;
+    width: 200px;
+    background-color: #EAEAEA;
+    transform: translate(-42%,0);
+    top: 45px; 
+    padding: 10px;
+    border: 1px solid green;
+    display: none;
+}
+
+nav ul#user_info .carts-products a{
+    display: block;
+    background-color: darkgreen;
+    color: #FFF;
+    padding: 6px;
+    margin: 5px 0;
+    text-align: center;
+    text-decoration: none;
+}
+
+nav ul#user_info li .badge{
+    display: block;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: crimson;
+    color: #FFF;
+    font-size: 10px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 15px;
+    top: -7px;
+    right: -7px;
+    display: none;
+}
+
+nav ul li a{
+    display: block;
+    color: #fff;
+    min-width: 50px;
+    margin: 0 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+/* ------------------- General Form -------------------- */
+.section-form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 40%;
+    text-align: center;
+    background-color: #BC6FF1;
+    padding: 20px;
+}
+
+.section-form h2{
+    font-size: 50px;
+    letter-spacing: 2px;
+    color: #52057B;
+}
+
+.section-form form input{
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin: 5px 0;
+    padding: 5px;
+    border: 1px solid #ddd;
+    font-family: 'Oswald', sans-serif;
+    outline: none;
+}
+
+.section-form form input[type="submit"]{
+    font-size: 25px;
+    text-transform: uppercase;
+    height: auto;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.section-form form input[type="submit"]:hover{
+    opacity: 0.9;
+}
+
+.section-form span{
+    margin-right: 10px;
+}
+
+/* ---------------------------- PRODUCTS --------------------------- */
+.products{
+    width: 60%;
+    float :left;
+    margin: 10px 0;
+}
+
+.products-filter{
+    width: 35%;
+    float: right;
+    margin: 10px 0;
+}
+
+.products-filter #size-filter{
+    display: block;
+    width: 100%;
+    height: 40px;
+    border: 1px solid darkgreen;
+    border-radius: 10px;
+    padding: 5px;
+    outline: none;
+    color: #000;
+    font-family: 'Oswald', sans-serif;
+}
+
+.product-item{
+    display: flex;
+    width: 100%;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    min-height: 150px;
+}
+
+.product-item-img{
+    width: 25%;
+    margin-right: 10px;
+}
+
+.product-item-desc a{
+    display: block;
+    font-size: 25px;
+    color: #000;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.product-item-actions{
+    flex: 1;
+    text-align: right;
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-item-actions .add-to-cart{
+    display: block;
+    margin-left: auto;
+    background-color: darkgreen;
+    color: #fff;
+    border: 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Oswald', sans-serif;
+}
+
+.product-item-actions .favorite{
+    cursor: pointer;
+    display: block;
+    width: 20px;
+    margin-left: auto;
+    padding: 0 10px 5px 0;
+}
+
+.noProducts{
+    position: absolute;
+    width: 50%;
+    height: 100px;
+    background-color: darkgreen;
+    color: #FFF;
+    font-size: 30px;
+    text-align: center;
+    line-height: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.edit-product ,.delete-product{
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    margin-top: 5px;
+    margin-right: 5px;
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Oswald', sans-serif;
+    cursor: pointer;
+}
+
+.edit-product{
+    background-color: darkblue;
+}
+
+.delete-product{
+    background-color: darkred;
+}
+
+.item-qte{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    background-color: darkred;
+    font-size: 10px;
+    color: #FFF;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+}
+
+/* ----------------------------- ProductsDetails ------------------------------- */
+
+.item-details img{
+    width: 100%;
+    margin: 10px 0;
+    border: 1px solid #333;
+    padding: 2px;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* ----------------------------- Search Input -----------------------------------*/
+#search{
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin: 10px 0;
+    padding: 5px;
+    border: 1px solid darkgreen;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: 'Oswald', sans-serif;
+    outline: none;
+}
+
+
+/* ----------------------------- Create Product ----------------------------- */
+.create-product-icon{
+    position: fixed;
+    bottom: 35px;
+    right: 35px;
+    width: 50px;
+    height: 50px;
+    background-color: darkgreen;
+    color: #FFF;
+    text-decoration: none;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    opacity: 1;
+    transition: opacity 0.2s;
+}
+
+.create-product-icon:hover{
+    opacity: 0.9;
+}
+
+
+/* ------------------------------- Profile ------------------------------------- */
+
+.user-profile{
+    width: 100%;
+    height: 290px;
+    background-color: #f2f2f2;
+    margin: 120px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    font-size: 25px;
+    border: 1px solid darkgreen;
+    border-radius: 20px;
+}
+
+.user-profile-image{
+    width: 250px;
+    height: 250px;
+    margin: 20px 50px 20px 30px;
+    border-radius: 50%;
+}
+
+.user-profile-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.user-profile-info{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    height: 100%;
+}
+
+.username-placeholder , .email-placeholder , .nbrProducts-placeholder{
+    color: darkolivegreen;
+}
+
+.username-placeholder span , .email-placeholder span , .nbrProducts-placeholder span{
+    color: #000;
+}
+
+#edit-user-btn{
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 20px;
+    width: 100px;
+    height: 30px;
+    background-color: darkblue;
+    font-size: 17px;
+    text-align: center;
+    line-height: 30px;
+    color: #FFF;
+    border-radius: 6px;
+}
+
+
+/* ------------------------------------ Edit Profile -----------------------------------------*/
+
+.edit-profile-page form input{
+    width: 100%;
+    height: 45px;
+    padding: 10px;
+    background-color: #FFF;
+    border: 1px solid #999;
+    margin: 10px 0;
+    display: block;
+    border-radius: 10px;
+    font-size: 19px;
+    outline: none;
+}
+
+.edit-form-holder{
+    width:100%;
+    height: auto;
+    border: 2px solid darkblue;
+    border-radius: 15px;
+    padding: 40px;
+    margin: 100px auto;
+}
+
+.edit-profile-page form input[type = "submit"]{
+    background-color: darkblue;
+    color: #FFF;
+    border: 0;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.2s;
+}
+
+.edit-profile-page form input[type = "submit"]:hover{
+    opacity: 0.9;
+}
+
+#upload-avatar-file::-webkit-file-upload-button{
+    background-color: darkblue;
+    color: #FFF;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+}
+

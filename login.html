@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="CSS/login.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap" rel="stylesheet">
+    <title>Shopping Cart | Login Page</title>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="brand">Shopping Cart</a>
+                <nav>
+                    <ul>
+                        <li><a href="login.html">SignIn</a></li>
+                        <li><a href="register.html">SignUp</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="section-form">
+        <h2>Login User</h2>
+        <form novalidate>
+            <input type="text" placeholder="Enter Username..." id="username">
+            <input type="password" placeholder="Enter Password..." id="password">
+            <input type="submit" value="Sign In" id="sign_in">
+        </form>
+        <span>I don't have an Account</span><a href="register.html">register</a>
+    </section>
+    
+
+    <script src="JS/login.js"></script>
+</body>
+</html>
